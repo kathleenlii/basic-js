@@ -8,4 +8,7 @@ module.exports = function calculateHanoi(disksNumber, turnsSpeed) {
     seconds: seconds
   }
 };
+module.exports = {
+  calculateHanoi
+};
 

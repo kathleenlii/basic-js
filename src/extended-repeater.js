@@ -1,6 +1,6 @@
 const { NotImplementedError } = require('../extensions/index.js');
 
-module.exports = function repeater(str, options) {
+ function repeater(str, options) {
   if (!options.repeatTimes) {
     options.repeatTimes = 1;
   }
@@ -50,4 +50,8 @@ module.exports = function repeater(str, options) {
     }
   }
   return resultString;
+};
+
+module.exports = {
+  repeater
 };

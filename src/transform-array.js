@@ -1,6 +1,6 @@
 const { NotImplementedError } = require('../extensions/index.js');
 
-module.exports = function transform(arr) {
+ function transform(arr) {
   const DOUBLE_NEXT = "--double-next";
   const DOUBLE_PREV = "--double-prev";
   const DISCARD_PREV = "--discard-prev";
@@ -25,3 +25,7 @@ module.exports = function transform(arr) {
   });
   return transformArray;
 };
+
+module.exports = {
+  transform
+}

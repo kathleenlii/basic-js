@@ -3,7 +3,7 @@ const MODERN_ACTIVITY = 15;
 const HALF_LIFE_PERIOD = 5730;
 const logOf2 = 0.693
 
-module.exports = function dateSample(sampleActivity) {
+function dateSample(sampleActivity) {
   if (typeof sampleActivity !== "string")
     return false;
   const activity = +sampleActivity;
@@ -11,3 +11,7 @@ module.exports = function dateSample(sampleActivity) {
     return Math.ceil(Math.log(MODERN_ACTIVITY / activity) / (logOf2 / HALF_LIFE_PERIOD));
   return false;
 };
+
+module.exports = {
+  dateSample
+}

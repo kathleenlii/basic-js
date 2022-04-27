@@ -1,6 +1,6 @@
 const { NotImplementedError } = require('../extensions/index.js');
 
-module.exports = function getSeason(date) {
+function getSeason(date) {
   if (!date)
     return "Unable to determine the time of year!";
   if (!(date instanceof Date) || (date.toString !== Date.prototype.toString)) {
@@ -18,3 +18,6 @@ module.exports = function getSeason(date) {
     return "winter";
 };
 
+module.exports = {
+  getSeason
+};

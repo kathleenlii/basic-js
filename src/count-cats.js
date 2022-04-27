@@ -1,6 +1,6 @@
 const CAT = "^^";
 
-module.exports = function countCats(matrix) {
+ function countCats(matrix) {
    return matrix.reduce((acc, value) => {
         return acc + value.filter(item => {
             return item === CAT
@@ -8,3 +8,6 @@ module.exports = function countCats(matrix) {
     }, 0);
 };
 
+module.exports = {
+    countCats
+  }
