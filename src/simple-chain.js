@@ -1,4 +1,4 @@
-const CustomError = require("../extensions/custom-error");
+const { NotImplementedError } = require('../extensions/index.js');
 
 
 
@@ -39,3 +39,4 @@ const chainMaker = {
 };
 
 module.exports = chainMaker;
+

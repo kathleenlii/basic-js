@@ -1,5 +1,4 @@
-const CustomError = require("../extensions/custom-error");
-
+const { NotImplementedError } = require('../extensions/index.js');
 class VigenereCipheringMachine {
   constructor(machineType) {
     if (machineType !== false) {
@@ -72,4 +71,6 @@ class VigenereCipheringMachine {
   }
 };
 
-module.exports = VigenereCipheringMachine;
+module.exports = {
+  VigenereCipheringMachine
+};

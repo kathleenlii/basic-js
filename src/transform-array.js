@@ -1,4 +1,4 @@
-const CustomError = require("../extensions/custom-error");
+const { NotImplementedError } = require('../extensions/index.js');
 
 module.exports = function transform(arr) {
   const DOUBLE_NEXT = "--double-next";

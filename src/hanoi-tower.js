@@ -1,4 +1,4 @@
-const CustomError = require("../extensions/custom-error");
+const { NotImplementedError } = require('../extensions/index.js');
 
 module.exports = function calculateHanoi(disksNumber, turnsSpeed) {
   const turns = Math.pow(2, disksNumber) - 1;
@@ -8,3 +8,4 @@ module.exports = function calculateHanoi(disksNumber, turnsSpeed) {
     seconds: seconds
   }
 };
+

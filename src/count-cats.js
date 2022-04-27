@@ -7,3 +7,4 @@ module.exports = function countCats(matrix) {
         }).length;
     }, 0);
 };
+
