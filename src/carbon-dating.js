@@ -10,7 +10,7 @@ function dateSample(sampleActivity) {
   if (activity > 0 && activity <= 15)
     return Math.ceil(Math.log(MODERN_ACTIVITY / activity) / (logOf2 / HALF_LIFE_PERIOD));
   return false;
-};
+}
 
 module.exports = {
   dateSample
