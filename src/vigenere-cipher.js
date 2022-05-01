@@ -1,4 +1,6 @@
 const { NotImplementedError } = require('../extensions/index.js');
+
+
 class VigenereCipheringMachine {
   constructor(machineType) {
     if (machineType !== false) {
@@ -22,7 +24,7 @@ class VigenereCipheringMachine {
   encrypt(message, key) {
     let result = [];
     if (!(message && key)) {
-      throw "Error";
+      throw new Error('Incorrect arguments!');
     }
     let keyIndex = 0;
     for (let v of message) {
@@ -47,7 +49,7 @@ class VigenereCipheringMachine {
   decrypt(encryptedMessage, key) {
     let result = [];
     if (!(encryptedMessage && key)) {
-      throw "Error";
+      throw new Error('Incorrect arguments!');
     }
     let keyIndex = 0;
     for (let v of encryptedMessage) {
