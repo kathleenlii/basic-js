@@ -1,7 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
-
-
-
+const { NotImplementedError } = require("../extensions/index.js");
 
 const chainMaker = {
   chain: [],
@@ -35,8 +32,9 @@ const chainMaker = {
     let chainResult = this.chain.map((value) => `( ${value} )`);
     this.chain = [];
     return chainResult.join("~~");
-  }
+  },
 };
 
-module.exports = chainMaker;
-
+module.exports = {
+  chainMaker,
+};
