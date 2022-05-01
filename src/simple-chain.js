@@ -5,6 +5,7 @@ const chainMaker = {
   getLength() {
     return this.chain.length;
   },
+
   addLink(value) {
     if (value === undefined) {
       this.chain.push(" ");
@@ -16,18 +17,22 @@ const chainMaker = {
     }
     return this;
   },
+
   removeLink(position) {
-    if (position <= 0 || position > this.chain.length) {
+    if (position - 1 >= 0 && position <= this.chain.length) {
+      this.chain.splice(position - 1, 1);
+    } else {
       this.chain = [];
-      throw new Error("Error!");
+      throw new Error("You can't remove incorrect link!");
     }
-    this.chain.splice(position - 1, 1);
     return this;
   },
+
   reverseChain() {
     this.chain = this.chain.reverse();
     return this;
   },
+
   finishChain() {
     let chainResult = this.chain.map((value) => `( ${value} )`);
     this.chain = [];

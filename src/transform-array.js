@@ -11,7 +11,7 @@ const { NotImplementedError } = require('../extensions/index.js');
   const transformArray = []
 
   if (!Array.isArray(arr))
-    throw new Error("Error!");
+    throw new Error("'arr' parameter must be an instance of the Array!");
 
   arr.forEach((value, index) => {
     if (value == DOUBLE_NEXT && (index + 1 < arr.length))
